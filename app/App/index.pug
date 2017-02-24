@@ -1,0 +1,9 @@
+div.todos-app
+  div.todos
+    d-each(set="{todos}", item="todo", uid="{todo.id}")
+      div(
+        d-on(click)="{toggleTodo(todo.id)}"
+        d-style(text-decoration)="{todo.finished ? 'line-through' : 'none'}"
+      ) {todo.task}
+  input(d-value="task")
+  button(d-on(click)="{addTodo()}") Add todo
