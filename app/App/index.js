@@ -21,12 +21,8 @@ class App extends Block {
     this.task = '';
   }
 
-  findIndexById(id) {
-    return this.todos.findIndex(({ id: ID }) => id === ID);
-  }
-
   toggleTodo(id) {
-    const index = this.findIndexById(id);
+    const index = this.todos.findIndex(({ id: ID }) => id === ID);
 
     this.todos = [
       ...this.todos.slice(0, index),
