@@ -9,7 +9,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /.pug$/, loader: 'pug-loader', exclude: [/node_modules/] }
+      { test: /.pug$/, loader: 'dwayne-html-loader!pug-html-loader', exclude: /node_modules/ }
     ]
   },
   watch: true

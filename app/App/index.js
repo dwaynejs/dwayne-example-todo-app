@@ -1,10 +1,10 @@
-import { Block, initApp, find } from 'dwayne';
-import template from './index.pug';
+import { Block } from 'dwayne';
+import html from './index.pug';
 
 let id = 0;
 
 class App extends Block {
-  static template = template();
+  static html = html;
 
   todos = [];
   task = '';
@@ -35,6 +35,4 @@ class App extends Block {
   }
 }
 
-Block.block('App', App);
-
-initApp('App', find('.root'));
+export default App;
